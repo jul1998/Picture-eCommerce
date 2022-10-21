@@ -19,7 +19,7 @@ const Context = React.createContext()
 
     function addToCart(img){
             setCartItems((previmg) =>[...previmg,img] )
-            console.log(cartItems)
+            //console.log(cartItems)
         }
     
 
@@ -39,7 +39,7 @@ const Context = React.createContext()
     
 
     return(
-        <Context.Provider value={{photos, toggleFavorite, addToCart}}>
+        <Context.Provider value={{photos, toggleFavorite, addToCart, cartItems}}>
         {children}
     </Context.Provider>
     )
