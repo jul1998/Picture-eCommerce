@@ -22,7 +22,11 @@ const Context = React.createContext()
             //console.log(cartItems)
         }
     
-
+    function removeFromCart(id){
+        setCartItems((prevCartItems) =>
+        prevCartItems.filter((element) => element.id !== id)
+            );
+          };
 
 
     function toggleFavorite(id) {
@@ -39,7 +43,7 @@ const Context = React.createContext()
     
 
     return(
-        <Context.Provider value={{photos, toggleFavorite, addToCart, cartItems}}>
+        <Context.Provider value={{photos, toggleFavorite, addToCart, cartItems, removeFromCart}}>
         {children}
     </Context.Provider>
     )
