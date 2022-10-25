@@ -43,7 +43,7 @@ const Context = React.createContext()
     
 
     return(
-        <Context.Provider value={{photos, toggleFavorite, addToCart, cartItems, removeFromCart}}>
+        <Context.Provider value={{photos, toggleFavorite, addToCart, cartItems, removeFromCart, setCartItems}}>
         {children}
     </Context.Provider>
     )
