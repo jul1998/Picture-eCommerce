@@ -26,18 +26,7 @@ function Cart() {
       setOrderText("Place Order");
     }, 3000);
   };
-  useEffect(() => {
-    const emptyCar = () => {
-      if (cartItems.length === 0) {
-        console.log(cartItems);
-        setCartEmpty(true);
-      } else if (cartItems.length > 0) {
-        console.log(cartItems);
-        setCartEmpty(false);
-      }
-    };
-    emptyCar();
-  }, [isNotCartEmpty]);
+
 
   return (
     <main className="cart-page">
